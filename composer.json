@@ -1,0 +1,52 @@
+{
+  "name": "dazza-dev/laravel-feco",
+  "description": "Paquete Laravel para facturación electrónica DIAN (Colombia).",
+  "keywords": [
+    "feco",
+    "feco-laravel"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": ">=8.0",
+    "dazza-dev/dian-feco": "^1.0",
+    "laravel/framework": "^8.0|^9.0|^10.0|^11.0|^12.0"
+  },
+  "require-dev": {
+    "larastan/larastan": "^2.0",
+    "laravel/pint": "^1.18",
+    "orchestra/testbench": "^8.27"
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Andres Daza",
+      "email": "adaza90@outlook.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "DazzaDev\\LaravelFeco\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "DazzaDev\\LaravelFeco\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "DazzaDev\\LaravelFeco\\LaravelFecoServiceProvider"
+      ],
+      "aliases": {
+        "LaravelFeco": "DazzaDev\\LaravelFeco\\Facades\\LaravelFeco"
+      }
+    }
+  }
+}
